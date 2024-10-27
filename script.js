@@ -66,7 +66,7 @@ document.querySelector('.check').addEventListener('click', function () {
       //   document.querySelector('.score').textContent = score;
       displayScore(score);
 
-      if (score < 44 && score > 30) {
+      if (score < 45 && score > 30) {
         document.querySelector('.heading').style.backgroundColor = '#3e2714';
         document.querySelector('.again').style.backgroundColor = '#820000';
         document.querySelector('.check').style.backgroundColor = '#820000';
