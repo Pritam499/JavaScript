@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    max-width: 1000px auto;
+}
+
+html{
+    font-size: 100%;
+    box-sizing:border-box;
+    overflow-x: hidden;
+}
+
+body{
+    font-family: "Poppins", serif;
+    color: #eee;
+    background-color:cadetblue;
+    /* background-color:olivedrab; */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* LAYOUT */
+header{
+    position: relative;
+    border-bottom: 7px soldi #eee;
+    /* width: 100%; */
+}
+
+main{
+    height: 35vh;
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+
+}
+main .left{
+    width: 52rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+.left input, .left .btn{
+    font-size: 120%;
+}
+main .right{
+    width: 52rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+/* Mobile view - Change flex direction to column */
+@media (max-width: 620px) { /* Adjust the max-width as needed */
+    main .right {
+        flex-direction: column;
+    }
+}
+
+.right p{
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    padding-left: 10px;
+}
+
+header > h1{
+    display: flex;
+    /* background-color:rgb(203, 0, 41); */
+    background-color:#008f77;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+header > p{
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+header .again {
+    display: inline-block;
+    /* margin: 4rem auto 0; Centers horizontally and adds top margin */
+    margin: 2rem 3rem;
+    font-size: 16px;
+    padding: 10px 20px; /* Adds padding for a button-like appearance */
+    cursor: pointer;
+    border-radius: 4px;
+    /* background-color: coral; */
+    color: #fff; /* Makes text color white for contrast */
+    text-align: center; /* Ensures text is centered within the button */
+}
+
+.number-container {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    margin: 2rem 0; /* Optional margin for spacing */
+}
+
+.line {
+    flex: 1; /* Allow the line to take up remaining space */
+    border: none; /* Remove default border */
+    border-top: 3px solid #eee; /* Set the top border to create a line */
+    margin: 0; /* No margin for the lines */
+}
+
+.number {
+    width: 15rem;
+    padding: 5px 10px; /* Remove padding */
+    background-color:#eee; /* Background color for the box */
+    color:#333; /* Text color */
+    font-size: 2rem; /* Font size */
+    font-weight: bold; /* Font weight */
+    font-size: 3rem;
+    text-align: center; /* Center text */
+    border-radius: 8px; /* Optional rounded corners */
+    position: relative; /* Required for absolute positioning */
+    z-index: 1; /* Ensure the number box is above the lines */
+}
+
+.number::before,
+.number::after {
+    content: "";
+    position: absolute;
+    top: 50%; /* Center the lines vertically */
+    width: calc(50vw - 80px); /* Extend lines to the sides */
+    height: 3px; /* Thickness of the lines */
+    background-color: #eee; /* Color of the lines */
+    z-index: -1; /* Place lines behind the number box */
+}
+
+.number::before {
+    left: -100vw; /* Start line from the left */
+}
+
+.number::after {
+    right: -100vw; /* Start line from the right */
+}
+
+
+.btn{
+    color: white;
+    background-color:crimson;
+    border: none;
+    padding: 9px 14px;
+    cursor: pointer;
+}
+
+input{
+    padding: 9px 14px;
+    border: none;
+    outline: none;
+}
+
+.message{
+    color:navajowhite;
+}
+.label-highscore{
+    /* color:rgb(197, 220, 20); */
+    color:#fff;
+}
