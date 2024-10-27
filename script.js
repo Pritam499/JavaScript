@@ -39,7 +39,6 @@ document.querySelector('.check').addEventListener('click', function () {
   if (!guess) {
     // document.querySelector('.message').textContent = '🥺No Number Inserted! ✏️';
     displayMessage('🥺 No Number Inserted! ✏️');
-
     // when player wins!
   } else if (guess === secretNumber) {
     // document.querySelector('.message').textContent = '💥Correct Number!';
@@ -47,8 +46,11 @@ document.querySelector('.check').addEventListener('click', function () {
     // document.querySelector('.number').textContent = secretNumber;
     displayNumber(secretNumber);
     document.querySelector('body').style.backgroundColor = '#60b347';
+    document.querySelector('.check').style.backgroundColor = '#eee';
+      document.querySelector('.number').style.width = '20rem';
 
-    document.querySelector('.number').style.width = '25rem';
+    // Disable the check button
+    document.querySelector('.check').disabled = true; 
 
     if (score > highScore) {
       highScore = score;
