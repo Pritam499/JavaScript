@@ -47,10 +47,10 @@ document.querySelector('.check').addEventListener('click', function () {
     displayNumber(secretNumber);
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.check').style.backgroundColor = '#eee';
-      document.querySelector('.number').style.width = '20rem';
+    document.querySelector('.number').style.width = '20rem';
 
     // Disable the check button
-    document.querySelector('.check').disabled = true; 
+    document.querySelector('.check').disabled = true;
 
     if (score > highScore) {
       highScore = score;
@@ -165,4 +165,7 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('.again').style.backgroundColor = 'crimson';
   document.querySelector('.check').style.backgroundColor = 'crimson';
   document.querySelector('.number').style.width = '15rem';
+
+  // Re-enable the check button
+  document.querySelector('.check').disabled = false; // Re-enable the button
 });
