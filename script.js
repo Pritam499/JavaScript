@@ -11,9 +11,9 @@
 
 // console.log(document.querySelector(".guess").value);
 
-let secretNumber = Math.trunc(Math.random() * 20) + 1;
+let secretNumber = Math.trunc(Math.random() * 50) + 1;
 
-let score = 20;
+let score = 50;
 
 let highScore = 0;
 // display message function
@@ -48,7 +48,7 @@ document.querySelector('.check').addEventListener('click', function () {
     displayNumber(secretNumber);
     document.querySelector('body').style.backgroundColor = '#60b347';
 
-    document.querySelector('.number').style.width = '30rem';
+    document.querySelector('.number').style.width = '25rem';
 
     if (score > highScore) {
       highScore = score;
@@ -66,13 +66,13 @@ document.querySelector('.check').addEventListener('click', function () {
       //   document.querySelector('.score').textContent = score;
       displayScore(score);
 
-      if (score < 17 && score > 10) {
+      if (score < 44 && score > 30) {
         document.querySelector('.heading').style.backgroundColor = '#3e2714';
         document.querySelector('.again').style.backgroundColor = '#820000';
         document.querySelector('.check').style.backgroundColor = '#820000';
         document.querySelector('body').style.backgroundColor =
           guess > secretNumber ? '#f2acac' : '#34499B';
-      } else if (score <= 10 && score > 0) {
+      } else if (score <= 30 && score > 0) {
         document.querySelector('.check').style.backgroundColor = '#440000';
         document.querySelector('body').style.backgroundColor = '#333';
       }
@@ -144,8 +144,8 @@ document.querySelector('.check').addEventListener('click', function () {
 // game reset functionality
 
 document.querySelector('.again').addEventListener('click', function () {
-  score = 20;
-  secretNumber = Math.trunc(Math.random() * 20) + 1;
+  score = 50;
+  secretNumber = Math.trunc(Math.random() * 50) + 1;
 
   //   document.querySelector('.message').textContent = 'Start guessing...';
   displayMessage('Start guessing...');
