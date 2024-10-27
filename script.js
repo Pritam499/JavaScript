@@ -38,7 +38,7 @@ document.querySelector('.check').addEventListener('click', function () {
   // When there is no input!
   if (!guess) {
     // document.querySelector('.message').textContent = '🥺No Number Inserted! ✏️';
-    displayMessage('🥺 No Number Inserted! ✏️');
+      displayMessage('🥺 No Number Inserted! ✏️');
     // when player wins!
   } else if (guess === secretNumber) {
     // document.querySelector('.message').textContent = '💥Correct Number!';
