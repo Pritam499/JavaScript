@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click to watch date & time</title>
+    <style>
+        h2{
+            text-align: center;
+            border-bottom: 2px solid rgb(22, 91, 228);
+            color: rgb(22, 91, 228);
+            margin-bottom: 12px;
+            font-size: 30px;
+        }
+        .btn{
+
+            background-color: rgb(22, 91, 228);
+            display: inline-block;
+            margin: 30px 0px;
+            padding: 13px 20px;
+            color: whitesmoke;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: rgb(182, 13, 100); /* Change color on hover */
+        }
+    </style>
+</head>
+<body>
+    <h2>Show date and time</h2>
+    <button onclick="displayDate()" class="btn" tabindex="0" role="button">Click here to display date and time</button>
+    <div id="showdate"></div>
+    <script>
+        function displayDate(){
+            document.getElementById("showdate").innerHTML = Date();
+        }
+    </script>
+</body>
+</html>
