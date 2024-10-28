@@ -68,13 +68,13 @@ document.querySelector('.check').addEventListener('click', function () {
       //   document.querySelector('.score').textContent = score;
       displayScore(score);
 
-      if (score < 45 && score > 30) {
+      if (score < 47 && score > 43) {
         document.querySelector('.heading').style.backgroundColor = '#3e2714';
         document.querySelector('.again').style.backgroundColor = '#820000';
         document.querySelector('.check').style.backgroundColor = '#820000';
         document.querySelector('body').style.backgroundColor =
           guess > secretNumber ? '#f2acac' : '#34499B';
-      } else if (score <= 30 && score > 0) {
+      } else if (score <= 43 && score > 0) {
         document.querySelector('.check').style.backgroundColor = '#440000';
         document.querySelector('body').style.backgroundColor = '#333';
       }
